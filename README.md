@@ -4,6 +4,8 @@ This C project is a unique implenmenation of the linked list data strcutre. As t
 
 ## Features
 
+- **Dynamic Type:** The list holds data of any type, making use of void pointers and user created comparison functions to allow custom data types.
+
 - **Memory Efficent:** The only memeory used is static memeory for the node pools. The avoidance of system calls in the program allows it to run fast and effiectnly, notable for projects which involve multithreaded proccesses.
 
 - **Current Item:** An additioonal pointer allows users to keep track of a "current" item within the linked list, allowing for controllable iteration or addition/deletion from the list.
