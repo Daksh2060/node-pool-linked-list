@@ -18,9 +18,11 @@ To achieve a constant runtime (`O(N)`), the program relies heavily on pointer ma
 
 ![](images/.png)
 
-This figure shows
+This diagram shows the two sets of nodes and lists. The node set is held in a stack, ensuring only unoccupied nodes are used when adding to a specific list. Lists can be concatonated to free a head and allow the creation of a new list. The maximum size of both the head and node pools may be adjusted as needed.
 
 ![](images/.png)
+
+This diagram shows the data strucutre of the node pool, implementated through a stack. When a node is in use, it is designated as such by a bool flag and is taken off the stack of the free node pool. When a node is no longer in use, etiehr beacuse the item it held was freed by the user of the list it was held in was cleared, the nodes flag is set to free and it is added to the top of the stack, ensuring no unabaiable nodes can be overwritten.
 
 ## Installation and Use
 
