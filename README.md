@@ -10,7 +10,7 @@ This C project is a unique implementation of the linked list data structure. As 
 
 - **Current Item:** An additional pointer allows users to keep track of a "current" item within the linked list, allowing for controllable iteration or addition/deletion from the list.
 
-- **Constant Time Operation:** Most operations of the linked list, such as adding a node to the front, end, or next to the current pointer are done in constant time
+- **Constant Time Operation:** Most operations of the linked list, such as adding a node to the front, end, or next to the current pointer are done in constant time.
 
 ## How does it work?
 
