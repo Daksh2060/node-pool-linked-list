@@ -14,7 +14,7 @@ This C project is a unique implementation of the linked list data structure. As 
 
 ## How does it work?
 
-To achieve a constant runtime (`O(N)`), the program relies heavily on pointer manipulation. The struct used to create the nodes for the list holds pointers to both the next and previous nodes in its own list. The list itself holds many meta pointers such as the `current` pointer, as well as the enum that tracks the state of the current pointer, such as if it is out of bounds. It also keeps track of the `front` and `end` of the list this way. Both node and list structs contain an `initialized` bool to ensure the same node or list cannot be overwritten. Since nodes are added in constant time and are taken from a finite pool of nodes, a stack is used to keep track of which nodes are free to be used, and are readded to this stack when they are made available.
+To achieve a constant runtime `O(N)`, the program relies heavily on pointer manipulation. The struct used to create the nodes for the list holds pointers to both the next and previous nodes in its own list. The list itself holds many meta pointers such as the `current` pointer, as well as the enum that tracks the state of the current pointer, such as if it is out of bounds. It also keeps track of the `front` and `end` of the list this way. Both node and list structs contain an `initialized` bool to ensure the same node or list cannot be overwritten. Since nodes are added in constant time and are taken from a finite pool of nodes, a stack is used to keep track of which nodes are free to be used, and are readded to this stack when they are made available.
 
 ![](images/.png)
 
