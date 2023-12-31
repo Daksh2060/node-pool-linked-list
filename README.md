@@ -31,7 +31,7 @@ Follow these steps to set up and run the Node Pool Linked List:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone
+   git clone https://github.com/Daksh2060/node-pool-linked-list-c
    ```
 
 ## Contact
