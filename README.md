@@ -1,6 +1,6 @@
 # Node Pool Linked List
 
-This C project is a unique implementation of the linked list data structure. As the name implies, this linked list implementation makes use of a pre-allocated pool of memory to create both a set of list heads and nodes. For example, the head set allows for 10 heads while the node set allows for 100 nodes by default, this enables a maximum of 10 lists with a maximum of 100 nodes total (these values can be adjusted). This linked list was created with speed and memory efficiency as a focus, with the intent of being used in other programs where these factors may be of high importance. 
+This C project is a unique implementation of the linked list data structure. As the name implies, this linked list implementation makes use of a pre-allocated pool of memory to create both a set of list heads and nodes. For example, the head set allows for 10 heads while the node set allows for 100 nodes by default, this enables a maximum of 10 lists with a maximum of 100 nodes total (these values can be adjusted). This linked list was created with speed and memory efficiency as a focus, with the intent of being used in other programs where these factors may be of high importance.
 
 ## Features
 
@@ -54,11 +54,36 @@ Follow these steps to set up and run the Node Pool Linked List:
    #define LIST_MAX_NUM_NODES 100
    ```
 
+5. Initiate a list under main:
 
+   ```bash
+   List* list1 = List_create();
+   ```
 
-   
+6. Use list functions to manipulate list (see header for all operations):
 
+   ```bash
+   List_append(lists1, "Hello");
+   ```
 
+7. To search a list, you must include a comparison helper function, for example:
+
+   ```bash
+   bool pComparator_int(void* pItem, void* pComparisonArg){
+
+      int item = *((int*)pItem);
+      int comparisonArg = *((int*)pComparisonArg);
+
+      if(item == comparisonArg){
+
+         return 1;
+      }
+      else{
+
+         return 0;
+      }
+   }
+   ```
 
 ## Contact
 
