@@ -14,7 +14,7 @@ This C project is a unique implementation of the linked list data structure. As 
 
 ## How does it work?
 
-To achieve a constant runtime `O(N)`, the program relies heavily on pointer manipulation. The struct used to create the nodes for the list holds pointers to both the next and previous nodes in its own list. The list itself holds many meta pointers such as the `current` pointer, as well as the enum that tracks the state of the current pointer, such as if it is out of bounds. It also keeps track of the `front` and `end` of the list this way. Both node and list structs contain an `initialized` bool to ensure the same node or list cannot be overwritten. Since nodes are added in constant time and are taken from a finite pool of nodes, a stack is used to keep track of which nodes are free to be used, and are readded to this stack when they are made available.
+To achieve a constant runtime `O(N)`, the program relies heavily on pointer manipulation. The struct used to create the nodes for the list holds pointers to both the next and previous nodes in its list. The list itself holds many meta pointers such as the `current` pointer, as well as the enum that tracks the state of the current pointer, such as if it is out of bounds. It also keeps track of the `front` and `end` of the list this way. Both node and list structs contain an `initialized` bool to ensure the same node or list cannot be overwritten. Since nodes are added in constant time and are taken from a finite pool of nodes, a stack is used to keep track of which nodes are free to be used, and are readded to this stack when they are made available.
 
 ![](images/.png)
 
@@ -41,13 +41,13 @@ Follow these steps to set up and run the Node Pool Linked List:
    ./test
    ```
 
-3. To include in your own program, include header in your C file:
+3. To include in your program, include the header in your C file:
 
    ```bash
    #include "list.h"
    ```
 
-4. To adjust the maximum number of lists and nodes, adjust the corresponding values in header:
+4. To adjust the maximum number of lists and nodes, adjust the corresponding values in the header:
 
    ```bash
    #define LIST_MAX_NUM_HEADS 10
@@ -60,7 +60,7 @@ Follow these steps to set up and run the Node Pool Linked List:
    List* list1 = List_create();
    ```
 
-6. Use list functions to manipulate list (see header for all operations):
+6. Use list functions to manipulate the list (see header for all operations):
 
    ```bash
    List_append(lists1, "Hello");
@@ -109,7 +109,7 @@ Follow these steps to set up and run the Node Pool Linked List:
    }
    ```
 
-   To delete a list, in this case one with static items:
+   To delete a list, in this case, one with static items:
 
    ```bash
    List_free(list1, pItemFreeFn_static);
