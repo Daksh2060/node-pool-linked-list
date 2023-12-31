@@ -90,7 +90,7 @@ Follow these steps to set up and run the Node Pool Linked List:
    List_search(list1, pComparator_int, "Hello");
    ```
 
-8. To delete a list, must provide a helper function:
+**8**. To delete a list, must provide a helper function:
 
    If using static memory to create items:
 
