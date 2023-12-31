@@ -34,6 +34,13 @@ Follow these steps to set up and run the Node Pool Linked List:
    git clone https://github.com/Daksh2060/node-pool-linked-list-c
    ```
 
+2. To run the included test file, use the makefile:
+
+   ```bash
+   make test
+   ./test
+   ```
+
 ## Contact
 
 Feel free to reach out if you have any questions, suggestions, or feedback:
