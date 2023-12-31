@@ -63,7 +63,7 @@ Follow these steps to set up and run the Node Pool Linked List:
 6. Use list functions to manipulate the list (see header for all operations):
 
    ```bash
-   List_append(lists1, "Hello");
+   List_append(list1, "Hello");
    ```
 
 7. To search a list, you must include a comparison helper function, for example (using ints):
@@ -87,7 +87,7 @@ Follow these steps to set up and run the Node Pool Linked List:
    To use the search the list for an item, in this case, the string `Hello`:
 
    ```bash
-   List_search(list11, pComparator_int, "Hello");
+   List_search(list1, pComparator_int, "Hello");
    ```
 
 8. To delete a list, must provide a helper function:
@@ -114,7 +114,6 @@ Follow these steps to set up and run the Node Pool Linked List:
    ```bash
    List_free(list1, pItemFreeFn_static);
    ```
-
 
 ## Contact
 
