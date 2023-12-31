@@ -66,7 +66,7 @@ Follow these steps to set up and run the Node Pool Linked List:
    List_append(lists1, "Hello");
    ```
 
-7. To search a list, you must include a comparison helper function, for example:
+7. To search a list, you must include a comparison helper function, for example (using ints):
 
    ```bash
    bool pComparator_int(void* pItem, void* pComparisonArg){
@@ -84,6 +84,37 @@ Follow these steps to set up and run the Node Pool Linked List:
       }
    }
    ```
+   To use the search the list for an item, in this case, the string `Hello`:
+
+   ```bash
+   List_search(list11, pComparator_int, "Hello");
+   ```
+
+8. To delete a list, must provide a helper function:
+
+   If using static memory to create items:
+
+   ```bash
+   void pItemFreeFn_static(void* pItem){
+     if(pItem)
+         pItem = NULL;
+   }
+   ```
+
+   If using allocated memory to create items:
+
+   ```bash
+   void pItemFreeFn_allocated(void* pItem){
+      free(pItem);
+   }
+   ```
+
+   To delete a list, in this case one with static items:
+
+   ```bash
+   List_free(list1, pItemFreeFn_static);
+   ```
+
 
 ## Contact
 
