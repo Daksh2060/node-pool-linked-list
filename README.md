@@ -41,6 +41,13 @@ Follow these steps to set up and run the Node Pool Linked List:
    ./test
    ```
 
+3. To include in your own program, include header in your C file:
+
+   ```bash
+   #include "list.h"
+   ./test
+   ```
+
 ## Contact
 
 Feel free to reach out if you have any questions, suggestions, or feedback:
