@@ -45,8 +45,20 @@ Follow these steps to set up and run the Node Pool Linked List:
 
    ```bash
    #include "list.h"
-   ./test
    ```
+
+4. To adjust the maximum number of lists and nodes, adjust the corresponding values in header:
+
+   ```bash
+   #define LIST_MAX_NUM_HEADS 10
+   #define LIST_MAX_NUM_NODES 100
+   ```
+
+
+
+   
+
+
 
 ## Contact
 
