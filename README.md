@@ -1,6 +1,6 @@
 # Node Pool Linked List
 
-This C project is a unique implementation of the linked list data structure. As the name implies, this linked list implementation makes use of a pre-allocated pool of memory to create both a set of list heads and nodes. For example, the head set allows for 10 heads while the node set allows for 100 nodes by default, this enables a maximum of 10 lists with a maximum of 100 nodes total (these values can be adjusted). This linked list was created with speed and memory efficiency as a focus, with the intent of being used in other programs where these factors may be of high importance.
+This C project is a unique implementation of the linked list data structure. As the name implies, this linked list implementation makes use of a pre-allocated pool of memory to create both a set of list heads and nodes. For example, the head set allows for 10 heads while the node set allows for 100 nodes by default, this enables a maximum of 10 lists with a maximum of 100 nodes total (these values can be adjusted). This linked list was created with speed and memory efficiency as a focus, with the intent of being used in other programs where these factors may be of high importance, such as programs involving kernel level processes.
 
 ## Features
 
