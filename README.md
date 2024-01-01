@@ -16,7 +16,7 @@ This C project is a unique implementation of the linked list data structure. As 
 
 To achieve a constant runtime `O(N)`, the program relies heavily on pointer manipulation. The struct used to create the nodes for the list holds pointers to both the next and previous nodes in its list. The list itself holds many meta pointers such as the `current` pointer, as well as the enum that tracks the state of the current pointer, such as if it is out of bounds. It also keeps track of the `front` and `end` of the list this way. Both node and list structs contain an `initialized` bool to ensure the same node or list cannot be overwritten. Since nodes are added in constant time and are taken from a finite pool of nodes, a stack is used to keep track of which nodes are free to be used, and are readded to this stack when they are made available.
 
-![Two Set System](images/.png)
+![Two Set System](images/Sets.png)
 
 This diagram shows the two sets of nodes and lists. The node set is held in a stack, ensuring only unoccupied nodes are used when adding to a specific list. Lists can be concatenated to free a list head and allow the creation of a new list. The maximum size of both the head and node pools may be adjusted as needed. When a node is in use, it is designated as such by a bool flag and is taken off the stack of the free node pool. When a node is no longer in use, either because the item it held was freed by the user or the list it was held in was cleared, the node's flag is set to free and it is added to the top of the stack, ensuring no unavailable nodes can be overwritten. This also allows us to add nodes to the list in `O(N)` time, as we do not need to search for free nodes, and can just pop one off the top of the stack.
 
